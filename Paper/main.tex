@@ -1,0 +1,41 @@
+% ============================================================
+% 主控文件：只负责整合，不写具体内容
+% 编译器请选择 XeLaTeX
+% ============================================================
+
+\documentclass[12pt,a4paper]{ctexart}
+\usepackage{xeCJK}
+
+% ---------- 导入导言区 ----------
+\input{settings/preamble}
+
+% ---------- 标题信息 ----------
+\title{\textbf{板凳龙沿螺线运动的建模分析}}  % 替换成你的题目
+
+\begin{document}
+\pagestyle{empty}
+% ---------- 生成标题 ----------
+\maketitle
+
+% ---------- 摘要 ----------
+\input{sections/00_abstract}
+
+
+
+% ---------- 正文各章节 ----------
+\input{sections/01_background}      % 问题背景与重述
+\input{sections/02_analysis}        % 问题分析
+\input{sections/03_assumptions}     % 模型假设与符号
+\input{sections/04_model_q1}        % 问题1
+\input{sections/05_model_q2}        % 问题2
+\input{sections/06_model_q3}        % 问题3
+\input{sections/07_validation}      % 模型检验
+\input{sections/08_evaluation}      % 模型评价与展望
+
+% ---------- 参考文献 ----------
+\input{sections/09_references}
+
+% ---------- 附录 ----------
+\input{sections/10_appendix}
+
+\end{document}

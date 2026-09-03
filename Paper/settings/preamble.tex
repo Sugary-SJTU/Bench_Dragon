@@ -1,0 +1,55 @@
+% ============================================================
+% 导言区：所有宏包、页面设置、样式命令
+% ============================================================
+
+% ---------- 页面设置 ----------
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+% ---------- 数学与符号 ----------
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{bm}          % 加粗数学符号
+\usepackage{cases}       % 分段函数环境
+
+% ---------- 表格与图形 ----------
+\usepackage{float}
+\usepackage{booktabs}    % 三线表
+\usepackage{graphicx}    % 插图
+\usepackage{caption}     % 图注、表注
+\usepackage{subcaption}  % 子图
+\usepackage{array}       % 增强表格列
+\usepackage{multirow}    % 合并单元格
+\usepackage{longtable}   % 长表格
+
+% ---------- 代码与列表 ----------
+\usepackage{listings}    % 代码插入
+\usepackage{xcolor}      % 颜色
+
+\usepackage{adjustbox} % 
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{red},
+    tabsize=4
+}
+
+% ---------- 参考文献与超链接 ----------
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black
+}
+\usepackage[numbers]{natbib}
+
+% ---------- 其他工具 ----------
+\usepackage{indentfirst} % 首段缩进
+\usepackage{fancyhdr}    % 页眉页脚（可选）
+\usepackage{enumitem}    % 列表定制
+\usepackage{float}       % 强制图片位置 [H]
