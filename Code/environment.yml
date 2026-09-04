@@ -1,0 +1,13 @@
+name: math-modeling
+
+channels:
+  - conda-forge
+
+dependencies:
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - jupyter
+  - ipykernel
+  - pytest

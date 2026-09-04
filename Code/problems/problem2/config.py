@@ -1,0 +1,11 @@
+"""问题 2 的搜索与可视化配置。"""
+
+from pathlib import Path
+
+TIME_START = 0.0
+TIME_END = 420.0
+TIME_STEP = 1.0
+TIME_TOLERANCE = 1e-6
+SINGLE_VISUALIZATION_TIME = 412.47
+GROUP_VISUALIZATION_TIMES = (410, 411, 412, 413)
+PICTURES_DIR = Path("pictures")

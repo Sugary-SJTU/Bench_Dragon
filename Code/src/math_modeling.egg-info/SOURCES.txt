@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/math_modeling.egg-info/PKG-INFO
+src/math_modeling.egg-info/SOURCES.txt
+src/math_modeling.egg-info/dependency_links.txt
+src/math_modeling.egg-info/top_level.txt
+src/project/__init__.py
+src/project/_archive/_archive.py
+src/project/config/__init__.py
+src/project/config/params.py
+src/project/utils/__init__.py
+src/project/utils/collision.py
+src/project/utils/spiral.py
+src/project/visualisation/__init__.py
+src/project/visualisation/plotting.py
