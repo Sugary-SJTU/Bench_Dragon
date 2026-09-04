@@ -69,31 +69,3 @@ python main.py problem3 --viz
 python main.py problem4      # 展示问题 4 参数
 python main.py all           # 依次运行 problem1 / problem2 / problem3
 ```
-
-## 源码组织说明（相对 notebook 的改动）
-
-1. **按题目与工具拆分模块**：
-   - `problems/problemN`：每题独立保留 `config.py`、`main.py`、`__init__.py`，分别维护题目参数与执行编排；
-   - `project.config.params`：参数 —— 全部只读常量；
-   - `project.utils.spiral`：曲线工具 —— 螺线几何量、位置/速度求解、问题 3 二分；
-   - `project.utils.collision`：碰撞工具 —— OBB 建模、SAT 检测、首次碰撞二分；
-   - `project.visualisation.plotting`：作图工具 —— 螺线/OBB/碰撞/转弯状态可视化；
-   - 入口统一收敛到 `main.py`。
-2. **可变全局状态 `p`**：原始代码通过 `global p` 在问题 3 中反复改写螺线参数
-   `p`。为保证所有读取方立即看到改写值，`p` 作为唯一可变状态保留在
-   `src/spiral.py`（由 `params.py` 的 `PITCH` 计算得出）；作图工具通过
-   `spiral.p` 读取/改写。其余只读参数集中在 `params.py`。算法函数体本身
-   未做改动。
-3. **被注释代码归档**：notebook 中被注释掉的实验性绘图代码完整保留在
-   `src/_archive.py`。
-4. **输出路径**：`result1.xlsx` 输出到 `results/`，绘图输出到 `pictures/`
-   （原 notebook 输出到当前目录与 `pictures/`）。
-5. **问题 4**：notebook 中只有参数定义、无求解代码，本项目如实保留为占位说明，
-   未虚构实现。
-
-## 与原 notebook 结果一致性验证
-
-- Problem 2 输出与 notebook 一致：`首次碰撞时间：412.473838 s`，
-  `发生碰撞的板凳：1 和 9`。
-- Problem 1 的 `results/result1.xlsx` 结构（time / handle / x / y / speed）
-  与原 notebook 一致。
